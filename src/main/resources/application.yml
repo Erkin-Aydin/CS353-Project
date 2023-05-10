@@ -1,20 +1,17 @@
-spring:
-    datasource:
-        url: jdbc:postgresql://localhost:5432/cs353db
-        username: postgres
-        password: password
-        driver-class-name: org.postgresql.Driver
-#    jpa:
-#        hibernate:
-#            ddl-auto: create-drop
-#        show-sql: true
-#        properties:
-#            hibernate:
-#                format_sql: true
-#        database: postgresql
-#        database-platform: org.hibernate.dialect.PostgreSQLDialect
-
+    app:
+        datasource:
+            main:
+                driver-class-name: org.postgresql.Driver
+                jdbc-url: jdbc:postgresql://localhost:5432/cs353db
+                username: postgres
+                password: "password"
+                pool-size: 30
     server:
         error:
             include-binding-errors: always
             include-message: always
+
+
+    #    spring:
+#      autoconfigure:
+#        exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
